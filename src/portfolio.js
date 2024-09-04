@@ -34,7 +34,7 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/mahmoud-hadry",
-  linkedin: "https://www.linkedin.com/in/mahmoudelhadry//",
+  linkedin: "https://www.linkedin.com/in/mahmoudelhadry",
   gmail: "m.elhadry93@gmail.com",
   // gitlab: "https://gitlab.com/saadpasta",
   facebook: "https://www.facebook.com/elhadry.8",
@@ -49,7 +49,7 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "SOFTWARE DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "A SOFTWARE DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
     emoji("⚡ Skilled in developing robust, scalable, and secure backend systems using Laravel, a powerful PHP framework known for its elegant syntax and efficiency in building web applications."),
     emoji("⚡ Proficient in creating and consuming RESTful APIs within Laravel, enabling seamless integration with frontend applications and third-party services such as Firebase/ AWS / Pusher / Payment gateways."),
@@ -75,6 +75,10 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-js"
     },
     {
+      skillName: "Ajax",
+      fontAwesomeClassname: "fab fa-Ajax"
+    },
+    {
       skillName: "php",
       fontAwesomeClassname: "fab fa-php"
     },
@@ -89,6 +93,10 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "Github",
       fontAwesomeClassname: "fab fa-github"
+    },
+    {
+      skillName: "composer",
+      fontAwesomeClassname: "fab fa-composer"
     },
     {
       skillName: "npm",
@@ -117,7 +125,12 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "jira",
       fontAwesomeClassname: "fab fa-jira"
-    }
+    },
+    {
+      skillName: "postman",
+      fontAwesomeClassname: "fab fa-postman"
+    },
+   
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -221,7 +234,7 @@ const bigProjects = {
     {
       image: require("./assets/images/mobimedLogo.jpg"),
       projectName: "Mobimed",
-      projectDesc: "MobiMED is a medical practice full integrated system that includes Patient Care Management, Schedule",
+      projectDesc: "MobiMED is a medical practice full integrated system that includes Patient Care Management, it's a healthcare platform that connects users, doctors and service providers.",
       // footerLink: [
       //   {
       //     name: "Visit Website",
@@ -234,6 +247,18 @@ const bigProjects = {
       image: require("./assets/images/arabie.jpg"),
       projectName: "Arabie",
       projectDesc: "Arabie is an e-learnning website that connects Arabic language tutors and non-Arabic speaking students easily, Presenting many astonishing features.",
+      // footerLink: [
+        // {
+          // name: "Visit Website",
+          // url: ""
+        }
+      // ]
+    // }
+    ,
+    {
+      image: require("./assets/images/octopus logo.webp"),
+      projectName: "Octopus",
+      projectDesc: "Octopus is a Data Automation and Analysis Tool provides advanced automation and analysis features for managing and processing data. With support for file processing, database management, API  integration and performing scheduled data analysis tasks.",
       // footerLink: [
         // {
           // name: "Visit Website",
@@ -375,7 +400,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+20-1151114585",
-  email_address: "m.elhadry93@gmail.com",
+  email_address: "mahmoudhadry@outlook.com",
   display: true
 };
 

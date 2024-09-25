@@ -36,7 +36,7 @@ const socialMediaLinks = {
   github: "https://github.com/mahmoud-hadry",
   linkedin: "https://www.linkedin.com/in/mahmoudelhadry",
   gmail: "m.elhadry93@gmail.com",
-  // gitlab: "https://gitlab.com/saadpasta",
+  instagram: "https://www.instagram.com/mahmoud_elhadry",
   facebook: "https://www.facebook.com/elhadry.8",
   medium: "https://medium.com/@m.elhadry93",
   // stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
@@ -162,7 +162,7 @@ const techStack = {
     },
     {
       Stack: "Frontend",
-      progressPercentage: "60%"
+      progressPercentage: "65%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -334,24 +334,30 @@ const achievementSection = {
 // Blogs Section
 
 const blogSection = {
-  title: "Blogs",
+  title: "Github Repos",
   subtitle:
     "",
   displayMediumBlogs: "", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
-      url: "",
-      title: "",
-      description:""
+      url: "https://github.com/mahmoud-hadry/chat",
+      title: "chat api",
+      description:"a chat API (doctor and patient)"
     },
     {
-      url: "",
-      title: "",
+      url: "https://github.com/mahmoud-hadry/new",
+      title: "new quickly blog",
       description:
-        ""
+        "a very simple blog created in my start"
+    },
+    {
+      url: "https://github.com/mahmoud-hadry/mahmoud-portfolio",
+      title: "my portfolio",
+      description:
+        "my portfolio source code"
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Talks Sections

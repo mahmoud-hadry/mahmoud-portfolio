@@ -51,11 +51,18 @@ const skillsSection = {
   title: "What I do",
   subTitle: "A SOFTWARE DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
-    emoji("⚡ Skilled in developing robust, scalable, and secure backend systems using Laravel, a powerful PHP framework known for its elegant syntax and efficiency in building web applications."),
-    emoji("⚡ Proficient in creating and consuming RESTful APIs within Laravel, enabling seamless integration with frontend applications and third-party services such as Firebase/ AWS / Pusher / Payment gateways."),
-    emoji("⚡ Experienced in using Laravel's Eloquent ORM for efficient database management, including designing, migrating, and querying databases, ensuring data integrity and performance optimization and also query builder."),
-    emoji("⚡ Knowledgeable in implementing middleware for request filtering, authentication, and authorization in Laravel applications, with a strong focus on security best practices, such as protection against SQL injection, XSS, and CSRF attacks."),
-
+    emoji(
+      "⚡ Skilled in developing robust, scalable, and secure backend systems using Laravel, a powerful PHP framework known for its elegant syntax and efficiency in building web applications."
+    ),
+    emoji(
+      "⚡ Proficient in creating and consuming RESTful APIs within Laravel, enabling seamless integration with frontend applications and third-party services such as Firebase/ AWS / Pusher / Payment gateways."
+    ),
+    emoji(
+      "⚡ Experienced in using Laravel's Eloquent ORM for efficient database management, including designing, migrating, and querying databases, ensuring data integrity and performance optimization and also query builder."
+    ),
+    emoji(
+      "⚡ Knowledgeable in implementing middleware for request filtering, authentication, and authorization in Laravel applications, with a strong focus on security best practices, such as protection against SQL injection, XSS, and CSRF attacks."
+    )
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -129,8 +136,7 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "postman",
       fontAwesomeClassname: "fab fa-postman"
-    },
-   
+    }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -146,7 +152,9 @@ const educationInfo = {
       subHeader: "BACHELOR’S DEGREE IN MATHEMATICS AND COMPUTER SCIENCE",
       duration: "September 2011 - July 2017",
       // desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Throughout my academic journey in Mathematics and Computer Science, I developed a strong foundation in both fields. My mathematics coursework encompassed a broad range of topics, including Calculus (I, II, III), Linear Algebra, Probability and Statistics, Discrete Mathematics, Differential Equations, and Numerical Analysis. This rigorous training equipped me with advanced analytical and problem-solving skills. In parallel, my computer science studies provided me with a comprehensive understanding of Data Structures and Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, Software Engineering, Computer Networks, and Theory of Computation. This combination of mathematical precision and technical expertise has enabled me to approach complex problems with a methodical and structured mindset."]
+      descBullets: [
+        "Throughout my academic journey in Mathematics and Computer Science, I developed a strong foundation in both fields. My mathematics coursework encompassed a broad range of topics, including Calculus (I, II, III), Linear Algebra, Probability and Statistics, Discrete Mathematics, Differential Equations, and Numerical Analysis. This rigorous training equipped me with advanced analytical and problem-solving skills. In parallel, my computer science studies provided me with a comprehensive understanding of Data Structures and Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, Software Engineering, Computer Networks, and Theory of Computation. This combination of mathematical precision and technical expertise has enabled me to approach complex problems with a methodical and structured mindset."
+      ]
     }
   ]
 };
@@ -234,7 +242,8 @@ const bigProjects = {
     {
       image: require("./assets/images/mobimedLogo.jpg"),
       projectName: "Mobimed",
-      projectDesc: "MobiMED is a medical practice full integrated system that includes Patient Care Management, it's a healthcare platform that connects users, doctors and service providers.",
+      projectDesc:
+        "MobiMED is a medical practice full integrated system that includes Patient Care Management, it's a healthcare platform that connects users, doctors and service providers."
       // footerLink: [
       //   {
       //     name: "Visit Website",
@@ -246,25 +255,26 @@ const bigProjects = {
     {
       image: require("./assets/images/arabie.jpg"),
       projectName: "Arabie",
-      projectDesc: "Arabie is an e-learnning website that connects Arabic language tutors and non-Arabic speaking students easily, Presenting many astonishing features.",
+      projectDesc:
+        "Arabie is an e-learnning website that connects Arabic language tutors and non-Arabic speaking students easily, Presenting many astonishing features."
       // footerLink: [
-        // {
-          // name: "Visit Website",
-          // url: ""
-        }
-      // ]
+      // {
+      // name: "Visit Website",
+      // url: ""
+    },
+    // ]
     // }
-    ,
     {
       image: require("./assets/images/octopus logo.webp"),
       projectName: "Octopus",
-      projectDesc: "Octopus is a Data Automation and Analysis Tool provides advanced automation and analysis features for managing and processing data. With support for file processing, database management, API  integration and performing scheduled data analysis tasks.",
+      projectDesc:
+        "Octopus is a Data Automation and Analysis Tool provides advanced automation and analysis features for managing and processing data. With support for file processing, database management, API  integration and performing scheduled data analysis tasks."
       // footerLink: [
-        // {
-          // name: "Visit Website",
-          // url: ""
-        }
-      // ]
+      // {
+      // name: "Visit Website",
+      // url: ""
+    }
+    // ]
     // }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -281,8 +291,7 @@ const achievementSection = {
   achievementsCards: [
     {
       title: "",
-      subtitle:
-        "",
+      subtitle: "",
       image: require("./assets/images/codeInLogo.webp"),
       imageAlt: "",
       footerLink: [
@@ -302,8 +311,7 @@ const achievementSection = {
     },
     {
       title: "",
-      subtitle:
-        "",
+      subtitle: "",
       image: require("./assets/images/googleAssistantLogo.webp"),
       imageAlt: "",
       footerLink: [
@@ -335,26 +343,23 @@ const achievementSection = {
 
 const blogSection = {
   title: "Github Repos",
-  subtitle:
-    "",
+  subtitle: "",
   displayMediumBlogs: "", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
       url: "https://github.com/mahmoud-hadry/chat",
       title: "chat api",
-      description:"a chat API (doctor and patient)"
+      description: "a chat API (doctor and patient)"
     },
     {
       url: "https://github.com/mahmoud-hadry/new",
       title: "new quickly blog",
-      description:
-        "a very simple blog created in my start"
+      description: "a very simple blog created in my start"
     },
     {
       url: "https://github.com/mahmoud-hadry/mahmoud-portfolio",
       title: "my portfolio",
-      description:
-        "my portfolio source code"
+      description: "my portfolio source code"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -364,9 +369,7 @@ const blogSection = {
 
 const talkSection = {
   title: "TALKS",
-  subtitle: emoji(
-    ""
-  ),
+  subtitle: emoji(""),
 
   talks: [
     {
@@ -386,9 +389,7 @@ const podcastSection = {
   subtitle: "",
 
   // Please Provide with Your Podcast embeded Link
-  podcast: [
-    ""
-  ],
+  podcast: [""],
   display: false // Set false to hide this section, defaults to true
 };
 

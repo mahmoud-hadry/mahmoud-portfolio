@@ -106,10 +106,6 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-composer"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
       skillName: "sql-database",
       fontAwesomeClassname: "fas fa-database"
     },

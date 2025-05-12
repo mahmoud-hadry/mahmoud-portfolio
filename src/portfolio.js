@@ -38,7 +38,7 @@ const socialMediaLinks = {
   gmail: "m.elhadry93@gmail.com",
   instagram: "https://www.instagram.com/mahmoud_elhadry",
   facebook: "https://www.facebook.com/elhadry.8",
-  medium: "https://medium.com/@m.elhadry93",
+  medium: "https://medium.com/@mahmoudhadry",
   // stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
@@ -110,10 +110,6 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
       skillName: "firebase",
       fontAwesomeClassname: "fas fa-fire"
     },
@@ -166,7 +162,7 @@ const techStack = {
     },
     {
       Stack: "Frontend",
-      progressPercentage: "65%"
+      progressPercentage: "70%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -178,7 +174,7 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
+      role: "Software Developer",
       company: "Ericsson",
       companylogo: require("./assets/images/ericsson.png"),
       date: "march 2022 – Present",

@@ -25,11 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-<<<<<<< Updated upstream
-    "deploy": "gh-pages -d build",
-=======
+
     "deploy": "gh-pages -d build -r https://github.com/mahmoud-hadry/mahmoud-portfolio.git",
->>>>>>> Stashed changes
     "check-format": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
 

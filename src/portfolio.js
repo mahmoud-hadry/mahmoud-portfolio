@@ -339,6 +339,11 @@ const blogSection = {
   displayMediumBlogs: "", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
+      url: "https://github.com/mahmoud-hadry/employeeTasks",
+      title: "employee Tasks",
+      description: "A Laravel-based application for managing employees, departments, and tasks"
+    },
+    {
       url: "https://github.com/mahmoud-hadry/chat",
       title: "chat api",
       description: "a chat API (doctor and patient)"

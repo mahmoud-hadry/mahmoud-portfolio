@@ -39,7 +39,6 @@ const socialMediaLinks = {
   instagram: "https://www.instagram.com/mahmoud_elhadry",
   facebook: "https://www.facebook.com/elhadry.8",
   medium: "https://medium.com/@mahmoudhadry",
-  // stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false

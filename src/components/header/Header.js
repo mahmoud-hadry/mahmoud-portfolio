@@ -62,7 +62,7 @@ function Header() {
             <li>
               <a href="#blogs">Github Repos</a>
             </li>
-          )}
+          )}  
           {/* {viewTalks && (
             <li>
               <a href="#talks">Talks</a>

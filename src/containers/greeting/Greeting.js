@@ -1,11 +1,12 @@
 import React, {useContext} from "react";
-import {Fade} from "react-reveal";
+import {Fade} from "../../components/Fade/Fade";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import {greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import mahmoudPortrait from "../../assets/images/mahmoudPortrait.png";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
@@ -54,7 +55,7 @@ export default function Greeting() {
               <img
                 className="greeting-portrait"
                 alt="Mahmoud Elhadry, Software Engineer"
-                src={require("../../assets/images/mahmoudPortrait.png")}
+                src={mahmoudPortrait}
                 width="520"
                 height="650"
               />

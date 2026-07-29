@@ -3,7 +3,7 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation";
+import splashAnimation from "./assets/lottie/splashAnimation.json";
 
 // Splash Screen
 
@@ -24,7 +24,7 @@ const greeting = {
   title: "Hi all, I'm Mahmoud",
   subTitle:
     " A passionate Software Engineer having technical expertise and knowledge in various software engineering concepts, programming languages, and development best practices. I build reliable software, backend services, and automation tools. I currently work at Ericsson as an Automated Operations Engineer, applying software engineering to network monitoring, auditing, and operational workflows.",
-  resumeLink: `${process.env.PUBLIC_URL}/Mahmoud_Elhadry_Software_Engineer_CV.pdf`,
+  resumeLink: `${import.meta.env.BASE_URL}Mahmoud_Elhadry_Software_Engineer_CV.pdf`,
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -123,7 +123,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Faculty of Science, Al-Menoufia University",
-      logo: require("./assets/images/mnf2.jpg"),
+      logo: new URL("./assets/images/mnf2.jpg", import.meta.url).href,
       subHeader: "Bachelor’s Degree in Mathematics and Computer Science",
       duration: "September 2011 - July 2017",
       descBullets: [
@@ -158,7 +158,7 @@ const workExperiences = {
     {
       role: "Automated Operations Engineer",
       company: "Ericsson",
-      companylogo: require("./assets/images/ericsson.png"),
+      companylogo: new URL("./assets/images/ericsson.png", import.meta.url).href,
       date: "March 2022 – Present",
       desc: "Ericsson · Smart Village, Egypt · Software engineering and automation focus",
       descBullets: [
@@ -170,7 +170,7 @@ const workExperiences = {
     {
       role: "Backend Developer",
       company: "Brmaja",
-      companylogo: require("./assets/images/brmaja.jpg"),
+      companylogo: new URL("./assets/images/brmaja.jpg", import.meta.url).href,
       date: "March 2020 – March 2022",
       desc: "New Cairo, Egypt",
       descBullets: [
@@ -182,7 +182,7 @@ const workExperiences = {
     {
       role: "Full Stack Developer",
       company: "Mobimed",
-      companylogo: require("./assets/images/mobimedLogo.jpg"),
+      companylogo: new URL("./assets/images/mobimedLogo.jpg", import.meta.url).href,
       date: "November 2018 – February 2020",
       desc: "Nasr City, Egypt",
       descBullets: [
@@ -233,25 +233,25 @@ const bigProjects = {
     "Commercial products and internal tools I helped design, build, and maintain.",
   projects: [
     {
-      image: require("./assets/images/earlyAlertLogo.png"),
+      image: new URL("./assets/images/earlyAlertLogo.png", import.meta.url).href,
       projectName: "Early Alert Monitoring Platform",
       projectDesc:
         "Designed and developed an enterprise monitoring platform that automates the collection, analysis, and evaluation of over 100 operational KPIs. Built a modular KPI engine with historical baseline comparison, anomaly detection, missing-data monitoring, and multi-channel alerting (Email/SMS). Optimized SQL queries and application performance to reduce execution time while implementing fault-tolerant processing, configurable thresholds, and scheduled background jobs to improve operational visibility and proactive incident detection."
     },
     {
-      image: require("./assets/images/mobimedLogo.jpg"),
+      image: new URL("./assets/images/mobimedLogo.jpg", import.meta.url).href,
       projectName: "Mobimed",
       projectDesc:
         "Designed and developed a healthcare practice management platform that connects patients, doctors, and service providers across patient care workflows. Built Laravel backend services and REST APIs for appointments, profiles, and provider integrations, with secure database design to support reliable data handling. Delivered responsive web interfaces optimized for mobile and cross-browser use, improving usability while maintaining maintainable frontend and backend features for day-to-day clinical operations."
     },
     {
-      image: require("./assets/images/arabie.jpg"),
+      image: new URL("./assets/images/arabie.jpg", import.meta.url).href,
       projectName: "Arabie",
       projectDesc:
         "Built backend services and product features for an e-learning platform that connects Arabic language tutors with non-Arabic-speaking students. Designed lesson and user management workflows, including scheduling, profiles, and learning-session support through maintainable API and database layers. Collaborated on feature delivery that improved tutor–student matching and platform usability while keeping the system flexible for expanding educational content and operational requirements."
     },
     {
-      image: require("./assets/images/octopus logo.webp"),
+      image: new URL("./assets/images/octopus logo.webp", import.meta.url).href,
       projectName: "Octopus",
       projectDesc:
         "Designed and developed a data automation and analysis tool that streamlines file processing, database operations, and third-party API integrations for recurring operational workloads. Implemented scheduled background jobs and analysis pipelines to reduce manual effort, with configurable processing flows for ingesting, transforming, and evaluating structured data. Focused on reliable automation, maintainable integrations, and clearer operational insights so teams could run data tasks consistently and at scale."
@@ -272,7 +272,7 @@ const achievementSection = {
     {
       title: "",
       subtitle: "",
-      image: require("./assets/images/codeInLogo.webp"),
+      image: new URL("./assets/images/codeInLogo.webp", import.meta.url).href,
       imageAlt: "",
       footerLink: [
         {
@@ -292,7 +292,7 @@ const achievementSection = {
     {
       title: "",
       subtitle: "",
-      image: require("./assets/images/googleAssistantLogo.webp"),
+      image: new URL("./assets/images/googleAssistantLogo.webp", import.meta.url).href,
       imageAlt: "",
       footerLink: [
         {
@@ -305,7 +305,7 @@ const achievementSection = {
     {
       title: "",
       subtitle: "",
-      image: require("./assets/images/pwaLogo.webp"),
+      image: new URL("./assets/images/pwaLogo.webp", import.meta.url).href,
       imageAlt: "",
       footerLink: [
         {name: "Certification", url: ""},

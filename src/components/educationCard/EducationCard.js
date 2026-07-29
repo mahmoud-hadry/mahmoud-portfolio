@@ -1,5 +1,5 @@
 import React, {createRef, useContext} from "react";
-import {Fade, Slide} from "react-reveal";
+import {Fade} from "../Fade/Fade";
 import "./EducationCard.scss";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -64,9 +64,9 @@ export default function EducationCard({school}) {
           </div>
         </div>
       </Fade>
-      <Slide left duration={2000}>
+      <Fade left duration={2000}>
         <div className="education-card-border"></div>
-      </Slide>
+      </Fade>
     </div>
   );
 }

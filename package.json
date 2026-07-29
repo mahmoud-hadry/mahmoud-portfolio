@@ -1,27 +1,39 @@
 {
-  "homepage": "https://mahmoud-hadry.github.io/",
   "name": "mahmoud-elhadry-portfolio",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "description": "Personal portfolio of Mahmoud Elhadry — Software Engineer",
+  "homepage": "https://mahmoud-hadry.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahmoud-hadry/mahmoud-hadry.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mahmoud-hadry/mahmoud-hadry.github.io/issues"
+  },
+  "author": "Mahmoud Elhadry",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "lottie-react": "^2.4.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-easy-emoji": "^1.8.1",
-    "react-headroom": "^3.0.0",
-    "react-reveal": "^1.2.2"
+    "react-headroom": "^3.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "test:ci": "react-scripts test --watchAll=false",
-    "check-format": "prettier --check \"{src,public}/**/*.{js,jsx,json,css,scss,html,md}\"",
-    "format": "prettier --write \"{src,public}/**/*.{js,jsx,json,css,scss,html,md}\""
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ci": "vitest run",
+    "check-format": "prettier --check \"{src,public,index.html,*.md,*.json}/**/*.{js,jsx,json,css,scss,html,md}\" \"*.{js,json,md,html}\"",
+    "format": "prettier --write \"{src,public}/**/*.{js,jsx,json,css,scss,html,md}\" \"*.{js,json,md,html}\"",
+    "audit:ci": "npm audit --omit=dev --audit-level=high"
   },
   "browserslist": {
     "production": [
@@ -41,10 +53,14 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "jest-canvas-mock": "^2.3.1",
-    "react-scripts": "^5.0.1",
-    "sass": "^1.32.8",
-    "prettier": "^2.8.8"
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^4.7.0",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.9.6",
+    "sass": "^1.99.0",
+    "vite": "^6.4.3",
+    "vitest": "^3.2.7"
   }
 }

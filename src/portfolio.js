@@ -24,7 +24,7 @@ const greeting = {
   title: "Hi all, I'm Mahmoud",
   subTitle:
     " A passionate Software Engineer having technical expertise and knowledge in various software engineering concepts, programming languages, and development best practices. I build reliable software, backend services, and automation tools. I currently work at Ericsson as an Automated Operations Engineer, applying software engineering to network monitoring, auditing, and operational workflows.",
-  resumeLink: `${process.env.PUBLIC_URL}/resume.html`,
+  resumeLink: `${process.env.PUBLIC_URL}/Mahmoud_Elhadry_Software_Engineer_CV.pdf`,
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 

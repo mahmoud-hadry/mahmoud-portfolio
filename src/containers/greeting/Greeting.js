@@ -37,13 +37,15 @@ export default function Greeting() {
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
+                {/* CV button temporarily hidden — PDF is available at greeting.resumeLink
                 {greeting.resumeLink && (
                   <Button
-                    text="View my résumé"
+                    text="Download CV"
                     href={greeting.resumeLink}
                     newTab={true}
                   />
                 )}
+                */}
               </div>
             </div>
           </div>

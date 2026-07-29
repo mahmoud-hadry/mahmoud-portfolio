@@ -1,36 +1,24 @@
 {
-  "homepage": "https://mahmoud-hadry.github.io/mahmoud-portfolio/",
-  "name": "developerfolio",
-  "version": "0.1.0",
+  "homepage": "https://mahmoud-hadry.github.io/",
+  "name": "mahmoud-elhadry-portfolio",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "colorthief": "^2.3.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "jest-canvas-mock": "^2.3.1",
     "lottie-react": "^2.4.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-easy-emoji": "^1.8.1",
     "react-headroom": "^3.0.0",
-    "react-reveal": "^1.2.2",
-    "react-scripts": "^5.0.1",
-    "react-test-renderer": "^16.10.2",
-    "react-twitter-embed": "3.0.3",
-    "sass": "^1.32.8"
+    "react-reveal": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-
-    "deploy": "gh-pages -d build -r https://github.com/mahmoud-hadry/mahmoud-portfolio.git",
-    "check-format": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
-
-
+    "test:ci": "react-scripts test --watchAll=false",
+    "check-format": "prettier --check \"{src,public}/**/*.{js,jsx,json,css,scss,html,md}\"",
+    "format": "prettier --write \"{src,public}/**/*.{js,jsx,json,css,scss,html,md}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -54,8 +42,9 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "dotenv": "^8.2.0",
-    "gh-pages": "^6.1.1",
+    "jest-canvas-mock": "^2.3.1",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.32.8",
     "prettier": "^2.8.8"
   }
 }

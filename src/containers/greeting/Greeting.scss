@@ -2,12 +2,14 @@
 
 .main {
   width: 90%;
+  max-width: 1200px;
   padding: 20px 10px;
   margin: 0px auto;
   margin-top: 4rem;
 }
 .greet-main {
   width: 90%;
+  max-width: 1200px;
   padding: 20px 10px;
   margin: 0px auto;
   margin-top: 2rem;
@@ -48,9 +50,60 @@
   line-height: 40px;
 }
 
-.greeting-image-div > img {
-  max-width: 100%;
+.greeting-image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+
+.greeting-portrait-frame {
+  position: relative;
+  width: min(100%, 480px);
+}
+
+.greeting-portrait-frame::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border-radius: 28px;
+  background: linear-gradient(
+    145deg,
+    rgba(108, 99, 255, 0.55),
+    rgba(85, 25, 139, 0.35)
+  );
+  z-index: 0;
+}
+
+.greeting-portrait {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
   height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 28px;
+  background: #f4f5f7;
+}
+
+.dark-mode .greeting-portrait-frame::before {
+  background: linear-gradient(
+    145deg,
+    rgba(108, 99, 255, 0.45),
+    rgba(255, 255, 255, 0.08)
+  );
+}
+
+.dark-mode .greeting-portrait {
+  background: #1f2433;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .greeting-portrait-frame::before {
+    inset: 12px;
+  }
 }
 
 .wave-emoji {
@@ -96,7 +149,8 @@
 }
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .greeting-text {
     font-size: 30px;
@@ -111,7 +165,21 @@
     display: block;
   }
   .greeting-image-div {
-    height: 256px;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0 1rem;
+  }
+
+  .greeting-portrait-frame {
+    width: min(100%, 320px);
+  }
+
+  .greeting-portrait-frame::before {
+    inset: 12px -12px -12px 12px;
+    border-radius: 22px;
+  }
+
+  .greeting-portrait {
+    border-radius: 22px;
   }
 }
 

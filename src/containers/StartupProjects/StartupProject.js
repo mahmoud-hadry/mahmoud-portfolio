@@ -5,23 +5,17 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
-  function openUrlInNewTab(url) {
-    if (!url) {
-      return;
-    }
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
-
   const {isDark} = useContext(StyleContext);
   if (!bigProjects.display) {
     return null;
   }
   return (
     <Fade bottom duration={1000} distance="20px">
-      <div className="main" id="projects">
+      <section className="main" id="projects" aria-labelledby="projects-title">
         <div>
-          <h1 className="skills-heading">{bigProjects.title}</h1>
+          <h2 className="skills-heading" id="projects-title">
+            {bigProjects.title}
+          </h2>
           <p
             className={
               isDark
@@ -47,9 +41,10 @@ export default function StartupProject() {
                     <div className="project-image">
                       <img
                         src={project.image}
-                        alt={project.projectName}
+                        alt={`${project.projectName} project logo`}
                         className="card-image"
-                      ></img>
+                        loading="lazy"
+                      />
                     </div>
                   ) : null}
                   <div className="project-detail">
@@ -69,15 +64,17 @@ export default function StartupProject() {
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {
                           return (
-                            <span
+                            <a
                               key={i}
                               className={
                                 isDark ? "dark-mode project-tag" : "project-tag"
                               }
-                              onClick={() => openUrlInNewTab(link.url)}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {link.name}
-                            </span>
+                            </a>
                           );
                         })}
                       </div>
@@ -88,7 +85,7 @@ export default function StartupProject() {
             })}
           </div>
         </div>
-      </div>
+      </section>
     </Fade>
   );
 }

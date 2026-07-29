@@ -3,30 +3,28 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import splashAnimation from "./assets/lottie/splashAnimation";
 
 // Splash Screen
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: false,
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 0
 };
 
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true // Used by Skills/Contact; Greeting always shows the portrait
 };
 
 const greeting = {
   username: "Mahmoud Elhadry",
   title: "Hi all, I'm Mahmoud",
-  subTitle: emoji(
-    "A passionate Software Developer 🚀 having technical expertise and knowledge in various software engineering concepts, programming languages, and development best practices."
-  ),
-  resumeLink:
-    "https://drive.google.com/file/d/1DGuGK5FDjOb64oaRd1JECWmf4eT8mQxS/view?usp=sharing", // Set to empty to hide the button
+  subTitle:
+    " A passionate Software Engineer having technical expertise and knowledge in various software engineering concepts, programming languages, and development best practices. I build reliable software, backend services, and automation tools. I currently work at Ericsson as an Automated Operations Engineer, applying software engineering to network monitoring, auditing, and operational workflows.",
+  resumeLink: `${process.env.PUBLIC_URL}/resume.html`,
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -35,9 +33,7 @@ const greeting = {
 const socialMediaLinks = {
   github: "https://github.com/mahmoud-hadry",
   linkedin: "https://www.linkedin.com/in/mahmoudelhadry",
-  gmail: "m.elhadry93@gmail.com",
-  instagram: "https://www.instagram.com/mahmoud_elhadry",
-  facebook: "https://www.facebook.com/elhadry.8",
+  gmail: "mahmoudhadry@outlook.com",
   medium: "https://medium.com/@mahmoudhadry",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
@@ -47,21 +43,13 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "A SOFTWARE DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "What I build",
+  subTitle: "SOFTWARE ENGINEERING · AUTOMATION · WEB & MOBILE APPS",
   skills: [
-    emoji(
-      "⚡ Skilled in developing robust, scalable, and secure backend systems using Laravel, a powerful PHP framework known for its elegant syntax and efficiency in building web applications."
-    ),
-    emoji(
-      "⚡ Proficient in creating and consuming RESTful APIs within Laravel, enabling seamless integration with frontend applications and third-party services such as Firebase/ AWS / Pusher / Payment gateways."
-    ),
-    emoji(
-      "⚡ Experienced in using Laravel's Eloquent ORM for efficient database management, including designing, migrating, and querying databases, ensuring data integrity and performance optimization and also query builder."
-    ),
-    emoji(
-      "⚡ Knowledgeable in implementing middleware for request filtering, authentication, and authorization in Laravel applications, with a strong focus on security best practices, such as protection against SQL injection, XSS, and CSRF attacks."
-    )
+    "Design and develop maintainable backend systems and REST APIs with PHP, Laravel, and Python.",
+    "Automate data-intensive operational workflows, including KPI monitoring, scheduled jobs, file processing, network monitoring, and auditing.",
+    "Build web interfaces with React and cross-platform mobile apps with React and Capacitor, reusing shared UI and APIs for installable iOS and Android experiences.",
+    "Integrate applications with databases and services such as Firebase, Pusher, and payment gateways; work productively with AI-assisted tools (Cursor, Antigravity, and similar) to deliver reliable software faster."
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -69,64 +57,60 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      skillName: "Python",
+      fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      skillName: "PHP",
+      fontAwesomeClassname: "fab fa-php"
+    },
+    {
+      skillName: "Laravel",
+      fontAwesomeClassname: "fab fa-laravel"
     },
     {
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "Ajax",
-      fontAwesomeClassname: "fab fa-Ajax"
+      skillName: "React",
+      fontAwesomeClassname: "fab fa-react"
     },
     {
-      skillName: "php",
-      fontAwesomeClassname: "fab fa-php"
+      skillName: "Capacitor",
+      fontAwesomeClassname: "fas fa-mobile-alt"
     },
     {
-      skillName: "laravel",
-      fontAwesomeClassname: "fab fa-laravel"
+      skillName: "HTML5",
+      fontAwesomeClassname: "fab fa-html5"
+    },
+    {
+      skillName: "CSS3",
+      fontAwesomeClassname: "fab fa-css3-alt"
+    },
+    {
+      skillName: "SQL",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "Firebase",
+      fontAwesomeClassname: "fas fa-fire"
+    },
+    {
+      skillName: "Linux",
+      fontAwesomeClassname: "fab fa-linux"
+    },
+    {
+      skillName: "Docker",
+      fontAwesomeClassname: "fab fa-docker"
     },
     {
       skillName: "Git",
       fontAwesomeClassname: "fab fa-git"
     },
     {
-      skillName: "Github",
+      skillName: "GitHub",
       fontAwesomeClassname: "fab fa-github"
-    },
-    {
-      skillName: "composer",
-      fontAwesomeClassname: "fab fa-composer"
-    },
-    { 
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "linux",
-      fontAwesomeClassname: "fab fa-linux"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
-    },
-    {
-      skillName: "jira",
-      fontAwesomeClassname: "fab fa-jira"
-    },
-    {
-      skillName: "postman",
-      fontAwesomeClassname: "fab fa-postman"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -138,13 +122,12 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Faculty of Science Al-Minofia University",
+      schoolName: "Faculty of Science, Al-Menoufia University",
       logo: require("./assets/images/mnf2.jpg"),
-      subHeader: "BACHELOR’S DEGREE IN MATHEMATICS AND COMPUTER SCIENCE",
+      subHeader: "Bachelor’s Degree in Mathematics and Computer Science",
       duration: "September 2011 - July 2017",
-      // desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
       descBullets: [
-        "Throughout my academic journey in Mathematics and Computer Science, I developed a strong foundation in both fields. My mathematics coursework encompassed a broad range of topics, including Calculus (I, II, III), Linear Algebra, Probability and Statistics, Discrete Mathematics, Differential Equations, and Numerical Analysis. This rigorous training equipped me with advanced analytical and problem-solving skills. In parallel, my computer science studies provided me with a comprehensive understanding of Data Structures and Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, Software Engineering, Computer Networks, and Theory of Computation. This combination of mathematical precision and technical expertise has enabled me to approach complex problems with a methodical and structured mindset."
+        "Coursework included data structures and algorithms, object-oriented programming, operating systems, databases, software engineering, computer networks, discrete mathematics, probability, and statistics."
       ]
     }
   ]
@@ -153,7 +136,7 @@ const educationInfo = {
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
+  viewSkillBars: false,
   experience: [
     {
       Stack: "Backend", //Insert stack or technology you have experience in
@@ -162,7 +145,6 @@ const techStack = {
     {
       Stack: "Frontend",
       progressPercentage: "65%"
-
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -174,30 +156,27 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Developer",
+      role: "Automated Operations Engineer",
       company: "Ericsson",
       companylogo: require("./assets/images/ericsson.png"),
-      date: "march 2022 – Present",
-      desc: "Smart Village KM 28 Cairo/Alex Road, Egypt",
+      date: "March 2022 – Present",
+      desc: "Ericsson · Smart Village, Egypt · Software engineering and automation focus",
       descBullets: [
-        "Execute full software development life cycle (SDLC).",
-        "Develop layouts and documentation to identify requirements and solutions.",
-        "Write well-designed, testable code.",
-        "Integrate software components into a fully functional software system.",
-        "Document and maintain software functionality.",
-        "Troubleshoot, debug and upgrade existing systems."
+        "Develop and maintain software solutions that support network monitoring, auditing, and operational workflows.",
+        "Collaborate with cross-functional teams to define requirements and integrate solutions across operational systems.",
+        "Improve system reliability through troubleshooting, performance optimization, testing, and maintainable documentation."
       ]
     },
     {
-      role: "Back-End Developer",
+      role: "Backend Developer",
       company: "Brmaja",
       companylogo: require("./assets/images/brmaja.jpg"),
       date: "March 2020 – March 2022",
-      desc: "the 5th settlement, Cairo, Egypt",
+      desc: "New Cairo, Egypt",
       descBullets: [
-        "Collaborating with the front-end developers and other team members to establish objectives and design more functional, cohesive codes to enhance the user experience.",
-        "Developing ideas for new features by monitoring industry developments and trends.",
-        "Participating in continuing education and training to remain current on best practices, learn new programming languages, and better assist other team members."
+        "Designed and developed REST APIs and backend services for web applications.",
+        "Integrated third-party services and optimized SQL queries and database performance.",
+        "Collaborated with frontend developers to deliver cohesive, reliable product features."
       ]
     },
     {
@@ -205,13 +184,11 @@ const workExperiences = {
       company: "Mobimed",
       companylogo: require("./assets/images/mobimedLogo.jpg"),
       date: "November 2018 – February 2020",
-      desc: "Nasr City, Cairo, Egypt",
+      desc: "Nasr City, Egypt",
       descBullets: [
-        "Developing front end.",
-        "Developing back end.",
-        "Ensuring cross-platform optimization for mobiles.",
-        "Ensuring responsiveness of applications.",
-        "Designing and developing APIs."
+        "Built responsive web applications with PHP, Laravel, JavaScript, HTML, and CSS.",
+        "Designed APIs and database structures to support product functionality.",
+        "Delivered mobile-friendly, cross-browser experiences and maintained frontend and backend features."
       ]
     }
   ]
@@ -221,53 +198,64 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  showGithubProfile: false,
+  display: true,
+  projects: [
+    {
+      name: "employeeTasks",
+      description:
+        "Laravel application for organizing employees, departments, and task workflows.",
+      url: "https://github.com/mahmoud-hadry/employeeTasks",
+      language: "PHP"
+    },
+    {
+      name: "chat",
+      description:
+        "Backend API for secure conversations between doctors and patients.",
+      url: "https://github.com/mahmoud-hadry/chat",
+      language: "PHP"
+    },
+    {
+      name: "mahmoud-hadry.github.io",
+      description:
+        "Source code for this responsive React portfolio and its GitHub Pages deployment.",
+      url: "https://github.com/mahmoud-hadry/mahmoud-hadry.github.io",
+      language: "JavaScript"
+    }
+  ]
 };
 
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "",
+  title: "Selected Projects",
+  subtitle:
+    "Commercial products and internal tools I helped design, build, and maintain.",
   projects: [
+    {
+      image: require("./assets/images/earlyAlertLogo.png"),
+      projectName: "Early Alert Monitoring Platform",
+      projectDesc:
+        "Designed and developed an enterprise monitoring platform that automates the collection, analysis, and evaluation of over 100 operational KPIs. Built a modular KPI engine with historical baseline comparison, anomaly detection, missing-data monitoring, and multi-channel alerting (Email/SMS). Optimized SQL queries and application performance to reduce execution time while implementing fault-tolerant processing, configurable thresholds, and scheduled background jobs to improve operational visibility and proactive incident detection."
+    },
     {
       image: require("./assets/images/mobimedLogo.jpg"),
       projectName: "Mobimed",
       projectDesc:
-        "MobiMED is a medical practice full integrated system that includes Patient Care Management, it's a healthcare platform that connects users, doctors and service providers."
-      // footerLink: [
-      //   {
-      //     name: "Visit Website",
-      //     url: ""
-      //   }
-      //   //  you can add extra buttons here.
-      // ]
+        "Designed and developed a healthcare practice management platform that connects patients, doctors, and service providers across patient care workflows. Built Laravel backend services and REST APIs for appointments, profiles, and provider integrations, with secure database design to support reliable data handling. Delivered responsive web interfaces optimized for mobile and cross-browser use, improving usability while maintaining maintainable frontend and backend features for day-to-day clinical operations."
     },
     {
       image: require("./assets/images/arabie.jpg"),
       projectName: "Arabie",
       projectDesc:
-        "Arabie is an e-learnning website that connects Arabic language tutors and non-Arabic speaking students easily, Presenting many astonishing features."
-      // footerLink: [
-      // {
-      // name: "Visit Website",
-      // url: ""
+        "Built backend services and product features for an e-learning platform that connects Arabic language tutors with non-Arabic-speaking students. Designed lesson and user management workflows, including scheduling, profiles, and learning-session support through maintainable API and database layers. Collaborated on feature delivery that improved tutor–student matching and platform usability while keeping the system flexible for expanding educational content and operational requirements."
     },
-    // ]
-    // }
     {
       image: require("./assets/images/octopus logo.webp"),
       projectName: "Octopus",
       projectDesc:
-        "Octopus is a Data Automation and Analysis Tool provides advanced automation and analysis features for managing and processing data. With support for file processing, database management, API  integration and performing scheduled data analysis tasks."
-      // footerLink: [
-      // {
-      // name: "Visit Website",
-      // url: ""
+        "Designed and developed a data automation and analysis tool that streamlines file processing, database operations, and third-party API integrations for recurring operational workloads. Implemented scheduled background jobs and analysis pipelines to reduce manual effort, with configurable processing flows for ingesting, transforming, and evaluating structured data. Focused on reliable automation, maintainable integrations, and clearer operational insights so teams could run data tasks consistently and at scale."
     }
-    // ]
-    // }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -334,29 +322,23 @@ const achievementSection = {
 // Blogs Section
 
 const blogSection = {
-  title: "Github Repos",
-  subtitle: "",
-  displayMediumBlogs: "", // Set true to display fetched medium blogs instead of hardcoded ones
+  title: "Technical Writing",
+  subtitle:
+    "Practical notes on Laravel, backend engineering, and maintainable software.",
+  displayMediumBlogs: false,
   blogs: [
     {
-      url: "https://github.com/mahmoud-hadry/employeeTasks",
-      title: "employee Tasks",
-      description: "A Laravel-based application for managing employees, departments, and tasks"
+      url: "https://medium.com/@mahmoudhadry/10-essential-laravel-excel-file-handling-strategies-every-developer-should-master-80ef79775634",
+      title:
+        "10 Essential Laravel Excel File Handling Strategies Every Developer Should Master",
+      description:
+        "Practical patterns for validating, importing, and processing user-uploaded spreadsheets with Laravel Excel."
     },
     {
-      url: "https://github.com/mahmoud-hadry/chat",
-      title: "chat api",
-      description: "a chat API (doctor and patient)"
-    },
-    {
-      url: "https://github.com/mahmoud-hadry/new",
-      title: "new quickly blog",
-      description: "a very simple blog created in my start"
-    },
-    {
-      url: "https://github.com/mahmoud-hadry/mahmoud-portfolio",
-      title: "my portfolio",
-      description: "my portfolio source code"
+      url: "https://medium.com/@mahmoudhadry/10-unique-powerful-laravel-microservices-strategies-most-developers-dont-know-but-should-9c3ec1660f9c",
+      title: "10 Powerful Laravel Microservices Strategies",
+      description:
+        "Approaches for designing Laravel services, integrations, and boundaries in distributed systems."
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -400,10 +382,10 @@ const resumeSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: "Let’s work together",
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+20-1151114585",
+    "Have a software engineering opportunity or a project to discuss? Send me a message.",
+  number: "+201064025940",
   email_address: "mahmoudhadry@outlook.com",
   display: true
 };
@@ -415,7 +397,7 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false;
 
 export {
   illustration,

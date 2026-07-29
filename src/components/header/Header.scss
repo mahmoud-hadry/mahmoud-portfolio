@@ -27,6 +27,21 @@
   margin: 0px auto;
 }
 
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+  padding: 10px 14px;
+  color: $textColorDark;
+  background: $buttonColor;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .header ul {
   margin: 0;
   padding: 0;
@@ -133,10 +148,21 @@
 /* menu btn */
 
 .header .menu-btn {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
-.header .menu-btn:checked ~ .menu {
+.header .menu-btn:focus-visible ~ .menu-icon {
+  outline: 3px solid $buttonColor;
+  outline-offset: 2px;
+}
+
+.header .menu-btn:checked ~ nav .menu {
   max-height: 486px;
 }
 
@@ -168,7 +194,7 @@
     align-items: center;
     justify-content: space-between;
   }
-  .header .menu {
+  .header nav .menu {
     max-height: none;
   }
   .header .menu-icon {

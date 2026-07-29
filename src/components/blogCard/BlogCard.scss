@@ -10,7 +10,7 @@
   background-color: $lightBackground1;
   box-shadow: 0 0 36px $lightBoxShadow;
   cursor: pointer;
-  height: 200px;
+  min-height: 230px;
 }
 
 .blog-title {
@@ -92,13 +92,25 @@
   transform: scale(30);
 }
 
+.blog-card:focus-visible::before {
+  transform: scale(30);
+}
+
 .blog-card:hover > .small {
   transition: all 0.3s ease-out;
   color: $blogCardHoverSmallColor;
 }
 
+.blog-card:focus-visible > .small {
+  color: $blogCardHoverSmallColor;
+}
+
 .blog-card:hover > h3 {
   transition: all 0.3s ease-out;
+  color: $darkBoxShadow2;
+}
+
+.blog-card:focus-visible > h3 {
   color: $darkBoxShadow2;
 }
 

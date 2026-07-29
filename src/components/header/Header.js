@@ -9,7 +9,7 @@ import {
   skillsSection,
   openSource,
   blogSection,
-  achievementSection,
+  achievementSection
 } from "../../portfolio";
 
 function Header() {
@@ -20,50 +20,59 @@ function Header() {
   const viewAchievement = achievementSection.display;
   const viewBlog = blogSection.display;
 
-
   return (
     <Headroom>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/mahmoud-portfolio" className="logo">
+        <a href="#greeting" className="logo" aria-label="Mahmoud Elhadry, home">
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
         </a>
-        <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label
-          className="menu-icon"
-          htmlFor="menu-btn"
-          style={{color: "white"}}
-        >
+        <input
+          className="menu-btn"
+          type="checkbox"
+          id="menu-btn"
+          aria-label="Toggle navigation menu"
+        />
+        <label className="menu-icon" htmlFor="menu-btn" aria-hidden="true">
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
-          {viewSkills && (
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-          )}
-          {viewExperience && (
-            <li>
-              <a href="#experience">Work Experiences</a>
-            </li>
-          )}
-          {viewOpenSource && (
-            <li>
-              <a href="#projects">Big Projects</a>
-            </li>
-          )}
-          {viewAchievement && (
-            <li>
-              <a href="#achievements">Achievements</a>
-            </li>
-          )}
-          {viewBlog && (
-            <li>
-              <a href="#blogs">Github Repos</a>
-            </li>
-          )}  
-          {/* {viewTalks && (
+        <nav aria-label="Primary navigation">
+          <ul className={isDark ? "dark-menu menu" : "menu"}>
+            {viewSkills && (
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+            )}
+            {viewExperience && (
+              <li>
+                <a href="#experience">Work Experiences</a>
+              </li>
+            )}
+            {viewOpenSource && (
+              <li>
+                <a href="#opensource">Open Source</a>
+              </li>
+            )}
+            {viewOpenSource && (
+              <li>
+                <a href="#projects">Selected Projects</a>
+              </li>
+            )}
+            {viewAchievement && (
+              <li>
+                <a href="#achievements">Achievements</a>
+              </li>
+            )}
+            {viewBlog && (
+              <li>
+                <a href="#blogs">Writing</a>
+              </li>
+            )}
+            {/* {viewTalks && (
             <li>
               <a href="#talks">Talks</a>
             </li>
@@ -73,16 +82,14 @@ function Header() {
               <a href="#resume">Resume</a>
             </li>
           )} */}
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
+            <li>
+              <a href="#contact">Contact Me</a>
+            </li>
+            <li>
               <ToggleSwitch />
-            </a>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </nav>
       </header>
     </Headroom>
   );
